@@ -6,24 +6,105 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:layout_margin="10sp"
-    android:orientation="horizontal">
+    android:orientation="vertical"
+    >
 
-    <EditText
+        <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Calculadora"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_margin="10sp"
+        android:layout_gravity="center"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20sp"
+        android:gravity="center">
+
+        <EditText android:id="@+id/edtValue1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Valor"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:layout_margin="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
+        <EditText android:id="@+id/edtValue2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-
+        android:layout_margin="5dp"
+        android:hint="Valor"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <Button android:id="@+id/btnSum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="#EA3E3E"
+        android:textColor="@color/black"
+        android:text="+"
+        android:textSize="25sp"/>
+
+        <Button android:id="@+id/btnSubtraction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="-"
+        android:backgroundTint="#24B6E3"
+        android:textColor="@color/black"
+        android:textSize="25sp"/>
+
+        <Button android:id="@+id/btnMultiplication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="*"
+        android:textColor="@color/black"
+        android:backgroundTint="#70CC20"
+        android:textSize="25sp"/>
+
+        <Button android:id="@+id/btnDivision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="/"
+        android:textColor="@color/black"
+        android:backgroundTint="#E8BD20"
+        android:textSize="25sp"/>
+
+        <Button android:id="@+id/btnResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="="
+        android:layout_marginTop="20sp"
+        android:textColor="@color/black"
+        android:backgroundTint="#20E881"
+        android:textSize="25sp"/>
+
+        <TextView android:id="@+id/txtResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Resultado"
+        android:gravity="center"
+        android:layout_marginTop="10sp"
+        android:textSize="25dp"/>
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>
